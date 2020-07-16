@@ -9,11 +9,22 @@ if __name__ == '__main__':
     window.withdraw()
     
     # Make a new turtle
+    shapeTurtle = turtle.Turtle()
     
-    # Ask the user what shape they want to draw and store it in a variable
-    
-    # Draw the shape requested by the user using if-elif-else statements
-    
-    # Call the turtle .done() method
+    while True:
+        # Ask the user what shape they want to draw and store it in a variable
+        shapeSides = simpledialog.askinteger(title="Polygons!", prompt="Please input the number of sides you'd like your polygon to have!")
+   
+        # Draw the shape requested by the user using if-elif-else statements
+        if shapeSides > 2:
+            shapeTurtle.circle(radius=100, extent=360, steps=shapeSides)
+            break
+        
+        else:
+            messagebox.showerror(title="Error!", message="You can't have that many sides on a polygon :<")
+            
+        
+        # Call the turtle .done() method
+    turtle.done()
     
     window.mainloop()
