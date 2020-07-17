@@ -22,13 +22,15 @@ Text Rendering Example:
                     x    y                                                       
 canvas.create_text(100, 50, text="text goes here", font=("Arial", 16))
 '''
-#Put your code here
 
+yPos = 0
 
-
-
-
-
-
+for i in range(4):
+    if i < 3:
+        displayText = "ice cream"
+    else:
+        displayText = "banana"        
+    canvas.create_text(100, 50 + yPos, text=displayText, font=("Arial", 16))
+    yPos += 25
 
 root.mainloop()
